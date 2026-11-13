@@ -1,0 +1,161 @@
+{
+
+"logo": {
+    "type": "kitty",
+    "source": "~/.config/fastfetch/logos/*",
+    //"width": 60,        // Aumenta o disminuye este número (ej. 15-30)
+    //"height": 20,       // Mantén proporcional o ajusta según necesites
+    "padding": {
+        "top": 1,
+        "right": 1
+    }
+},
+
+
+"display": {
+    "color": {
+      "keys": "38;2;193;28;132",    // Verde neón para las claves (OS, Kernel, etc.)
+      "title": "38;2;193;28;132",   // Verde neón para el título
+      "output": "38;2;150;255;180" // Verde menta para los valores (opcional)
+    },
+    
+    "separator": " : "
+  },
+
+
+
+
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "modules": [
+    
+    "title",
+
+
+
+
+    {
+        "type":"separator",
+        "string":"┌───────────────────────────────────────────────────────────┐",
+        "times": 1,
+        "outputColor": "38;2;193;28;132"
+    },
+
+    {
+    "type":"os",
+    "key":"| OS",
+    },
+    {
+    "type":"kernel",
+    "key":"|Kernel",
+    },
+    {
+    "type":"bootmgr",
+    "key":"|Bootmgr",
+    },
+    {
+    "type":"terminal",
+    "key":"|Terminal"
+    },
+    {
+    "type":"shell",
+    "key":"|Shell"
+    },
+    {
+        "type":"packages",
+        "disabled":["flatpak",],
+        "key":"|Packages"
+    },
+    {
+        "type":"separator",
+        "string":"└───────────────────────────────────────────────────────────┘",
+        "times": 1,
+        "outputColor": "38;2;193;28;132"
+    },
+    
+   //{
+    //"type": "command",
+    //"key": "OS lifetime",
+    //"text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo \"$days_difference days\""
+//},
+//{
+//    "type":"uptime",
+//    "key":"uptime"},
+        //"wmtheme",
+    //"theme",
+    //"icons",
+    
+    //"display",
+    //"de",
+        {
+        "type":"separator",
+        "string":"┌───────────────────────────────────────────────────────────┐",
+        "times": 1,
+        "outputColor": "38;2;193;28;132"
+    },
+    {
+    "type":"wm",
+    "key":"|Wm",
+    },
+    //"font",
+    {
+        "type":"cursor",
+        "key":"|Cursor"
+    },
+    //"host",
+    {
+        "type":"separator",
+        "string":"└───────────────────────────────────────────────────────────┘",
+        "times": 1,
+        "outputColor": "38;2;193;28;132"
+    },
+    //"terminalfont",
+    {
+        "type":"separator",
+        "string":"┌───────────────────────────────────────────────────────────┐",
+        "times": 1,
+        "outputColor": "38;2;193;28;132"
+    },
+    {
+        "type":"cpu",
+        "key":"|Cpu"
+    },
+    {
+        "type":"gpu",
+        "key":"|Gpu",
+    },
+    {
+     "type":"memory",
+     "key":"|Memory",
+     "percent":{
+         "type": 3,
+         "green": 30,
+	 "yellow": 70
+     }
+
+    
+    },
+    {
+    "type":"swap",
+    "key":"|Swap",
+    },
+    {
+    "type":"disk",
+    "key":"|Disk"
+    },
+    {
+        "type":"separator",
+        "string":"└───────────────────────────────────────────────────────────┘",
+        "times": 1,
+        "outputColor": "38;2;193;28;132"
+    },
+
+    //"localip",
+    //"battery",
+    //"poweradapter",
+    //"locale",
+    //"break",
+
+
+
+  ]
+}
